@@ -1,34 +1,35 @@
-$font-family: 'Arial', sans-serif;
-$primary-color: #007bff;
-$special-color: #ff6600;
+@import 'variables';
 
 body {
   font-family: $font-family;
-  background-color: #f0f0f0;
+  background-color: $body-background-color;
   color: #333;
 }
 
 .button {
   display: inline-block;
   padding: 10px;
-  color: #fff;
+  color: #110f0f;
   border: none;
-  border-radius: 5px;
+  border-radius: $default-button-radius;
   cursor: pointer;
 }
 
 .button-primary {
   @extend .button;
   background-color: $primary-color;
+  font-weight: bold;
 }
 
 .button-secondary {
   @extend .button;
-  background-color: #28a745; 
+  background-color: $secondary-color;
+  border: 2px solid #2831a7; 
 }
 
 .special-button {
   @extend .button; 
   background-color: $special-color;
+  text-transform: uppercase;
 }
 
